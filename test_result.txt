@@ -1,0 +1,13 @@
+2020/10/13 17:36:22 Opened file
+2020/10/13 17:36:22 End of file
+Generated report
+
+        Name : iPhone           Total quantity : 1              TotalCost : 5000000.00
+
+        Name : banana           Total quantity : 26             TotalCost : 8000.00
+
+        Name : peach            Total quantity : 8              TotalCost : 34000.00
+
+        Name : mango            Total quantity : 44             TotalCost : 1980000.00
+
+2020/10/13 17:36:22 File closed
