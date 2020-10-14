@@ -6,6 +6,7 @@ import (
 	"io"
 	"log"
 	"os"
+	"path/filepath"
 	"strconv"
 )
 
@@ -36,6 +37,13 @@ func openFile(path string) *os.File{
 	if err != nil{
 		log.Fatal("Fatal error occurred ", err)
 		panic(err)
+	}
+
+	fileExt := filepath.Ext(file.Name())
+
+	if fileExt != ".csv"{
+		log.Fatal("Fatal error occurred: file should be csv ")
+		panic("Fatal error occurred: file should be csv ")
 	}
 
 	log.Println("Opened file")
@@ -103,7 +111,12 @@ func generateReport(file *os.File){
 
 func main() {
 
-	path := "test.csv"
+	path := os.Args[1]
+
+	// Проверка на пустой путь
+	if path =="" {
+		path = "test.csv"
+	}
 
 	file := openFile(path)
 	defer closeFile(file)
