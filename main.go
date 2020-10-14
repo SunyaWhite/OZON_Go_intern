@@ -111,7 +111,13 @@ func generateReport(file *os.File){
 
 func main() {
 
-	path := os.Args[1]
+	path := ""
+
+	if len(os.Args) < 2{
+		path = "test.csv"
+	} else{
+		path = os.Args[1]
+	}
 
 	// Проверка на пустой путь
 	if path =="" {
